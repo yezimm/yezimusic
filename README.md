@@ -63,44 +63,6 @@
 | Android | `.apk` | 下载后在手机上安装；如系统提示，请允许安装未知来源应用。 |
 | Windows | 安装包或压缩包 | 下载后运行安装程序，或解压后启动应用。 |
 
-## 从源码运行
-
-请先安装 Flutter SDK，并准备对应平台的 Android SDK 或 Windows 桌面开发环境。
-
-```bash
-flutter pub get
-flutter run
-```
-
-### 构建 Android APK
-
-```bash
-flutter build apk --release
-```
-
-生成的 APK 默认位于：
-
-```text
-build/app/outputs/flutter-apk/app-release.apk
-```
-
-### 构建 Windows 版本
-
-```bash
-flutter build windows --release
-```
-
-如果需要制作 Windows 安装包，在项目根目录执行：
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\build_windows_installer.ps1
-```
-
-如果 Windows Release 已经生成，只重新制作安装包：
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\tool\build_windows_installer.ps1 -SkipFlutterBuild
-```
 
 ## 音源配置
 
